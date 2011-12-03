@@ -1,0 +1,7 @@
+﻿
+to do list:
+
+(1)create the database
+(2)add something to the database.
+(3)to display the things in the database.
+
