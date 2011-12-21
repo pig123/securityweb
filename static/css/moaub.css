@@ -1,0 +1,51 @@
+ 
+ .moaubHeader { /* moaub top img */
+ position:relative;
+ margin-bottom:-15px;
+ }
+ 
+.moaubTable {
+border:solid #606060 2px; 
+background-color:#222; 
+color:#fff; 
+margin:40px auto 40px 20px; 
+border-spacing:3px;
+border-collapse:separate;
+padding:5px;
+-moz-border-radius:12px;
+-webkit-border-radius:12px;
+border-radius:12px; 
+}
+ 
+
+.moaubTable tr td:hover  {
+background-color:#000; color:#ff6600;
+}
+
+.moaubTable tr, .moaubTable td {
+padding:3px 10px 3px 10px;
+border:solid #505050 1px;
+-moz-border-radius:12px !important;
+-webkit-border-radius:12px !important;
+border-radius:12px !important;
+}
+ 
+.moaubTitle {
+font-size:25px; font-weight:bold; color:#b0b0b0;
+margin:25px 0px 20px -10px;
+clear:both;
+}
+
+.moaubOrange {
+font-size:20px;
+font-weight:bold;
+color:#ff6600;
+margin:0px 0px 25px -10px;
+}
+
+.codecolorer-container {
+margin:30px auto 30px auto;
+position:relative;
+width:90%;
+padding:10px;
+}

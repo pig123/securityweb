@@ -1,0 +1,10 @@
+/* clearfix */ 
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+/* ul white space hack 
+li { zoom:1;  vertical-align:bottom;}
+ul li a { display:block; position:relative;}
+/* pngfix 
+{behavior: url(/js/iepngfix.htc); zoom: 1;}
+*/

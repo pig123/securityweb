@@ -1,0 +1,1385 @@
+$def with (name)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  dir="ltr" lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>撰写新文章 &lsaquo; CodeTick | 关注各类编程技巧 &#8212; WordPress</title>
+<script type="text/javascript">
+//<![CDATA[
+addLoadEvent = function(func){if(typeof jQuery!="undefined")jQuery(document).ready(func);else if(typeof wpOnload!='function'){wpOnload=func;}else{var oldonload=wpOnload;wpOnload=function(){oldonload();func();}}};
+var userSettings = {
+		'url': '/',
+		'uid': '4',
+		'time':'1323335386'
+	},
+	ajaxurl = 'http://www.code-trick.com/wp-admin/admin-ajax.php',
+	pagenow = 'post',
+	typenow = 'post',
+	adminpage = 'post-new-php',
+	thousandsSeparator = ',',
+	decimalPoint = '.',
+	isRtl = 0;
+//]]>
+</script>
+<link rel='stylesheet' href='http://www.code-trick.com/wp-admin/load-styles.php?c=0&amp;dir=ltr&amp;load=global,wp-admin&amp;ver=6fc53cd39ae6e24cbe8675674f4082af' type='text/css' media='all' />
+<link rel='stylesheet' id='zh-cn-pack-style-dashboard-css'  href='http://www.code-trick.com/wp-content/languages/zh_CN-dashboard.css?ver=1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='http://www.code-trick.com/wp-includes/js/thickbox/thickbox.css?ver=20090514' type='text/css' media='all' />
+<link rel='stylesheet' id='colors-css'  href='http://www.code-trick.com/wp-admin/css/colors-fresh.css?ver=20110703' type='text/css' media='all' />
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='ie-css'  href='http://www.code-trick.com/wp-admin/css/ie.css?ver=20110711' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/l10n.js?ver=20101110'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-admin/load-scripts.php?c=0&amp;load=jquery,utils&amp;ver=fb5c271ac01e8186b23ece33d5ce4961'></script>
+</head>
+<body class="wp-admin no-js  post-new-php branch-3-2 version-3-2-1 admin-color-fresh">
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+var c = document.body.className;
+c = c.replace(/no-js/, 'js');
+document.body.className = c;
+})();
+//]]>
+</script>
+
+<div id="wpwrap">
+
+<div id="adminmenuback"></div>
+<div id="adminmenuwrap">
+<div id="adminmenushadow"></div>
+<ul id="adminmenu">
+
+
+	<li class="wp-first-item menu-top menu-top-first menu-icon-dashboard menu-top-last" id="menu-dashboard">
+	<div class='wp-menu-image'><a href='index.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br /></div><a href='index.php' class="wp-first-item menu-top menu-top-first menu-icon-dashboard menu-top-last" tabindex="1">控制板</a></li>
+	<li class="wp-menu-separator"><div class="separator"></div></li>
+	<li class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" id="menu-posts">
+	<div class='wp-menu-image'><a href='edit.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br /></div><a href='edit.php' class="wp-has-submenu wp-has-current-submenu wp-menu-open open-if-no-js menu-top menu-icon-post menu-top-first" tabindex="1">文章</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>文章</div><ul><li class="wp-first-item"><a href='edit.php' class="wp-first-item" tabindex="1">所有文章</a></li><li class="current"><a href='post-new.php' class="current" tabindex="1">写文章</a></li></ul></div></div></li>
+	<li class="wp-has-submenu menu-top menu-icon-media" id="menu-media">
+	<div class='wp-menu-image'><a href='upload.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br /></div><a href='upload.php' class="wp-has-submenu menu-top menu-icon-media" tabindex="1">媒体</a>
+	<div class='wp-submenu'><div class='wp-submenu-wrap'><div class='wp-submenu-head'>媒体</div><ul><li class="wp-first-item"><a href='upload.php' class="wp-first-item" tabindex="1">媒体库</a></li><li><a href='media-new.php' tabindex="1">添加</a></li></ul></div></div></li>
+	<li class="menu-top menu-icon-comments menu-top-last" id="menu-comments">
+	<div class='wp-menu-image'><a href='edit-comments.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br /></div><a href='edit-comments.php' class="menu-top menu-icon-comments menu-top-last" tabindex="1">评论 <span class='awaiting-mod count-0'><span class='pending-count'>0</span></span></a></li>
+	<li class="wp-menu-separator"><div class="separator"></div></li>
+	<li class="menu-top menu-icon-users menu-top-first" id="menu-users">
+	<div class='wp-menu-image'><a href='profile.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br /></div><a href='profile.php' class="menu-top menu-icon-users menu-top-first" tabindex="1">个人资料</a></li>
+	<li class="menu-top menu-icon-tools menu-top-last" id="menu-tools">
+	<div class='wp-menu-image'><a href='tools.php'><br /></a></div><div class="wp-menu-arrow"><div></div></div><div class="wp-menu-toggle"><br /></div><a href='tools.php' class="menu-top menu-icon-tools menu-top-last" tabindex="1">工具</a></li><li id="collapse-menu" class="hide-if-no-js"><div id="collapse-button"><div></div></div><span>收起菜单</span></li></ul>
+</div>
+<div id="wpcontent">
+<div id="wphead">
+
+<img id="header-logo" src="http://www.code-trick.com/wp-includes/images/blank.gif" alt="" width="16" height="16" />
+<h1 id="site-heading" class="long-title">
+	<a href="http://www.code-trick.com/" title="查看站点">
+		<span id="site-title">CodeTick | 关注各类编程技巧</span>
+	</a>
+</h1>
+
+
+<div id="wphead-info">
+<div id="user_info">
+	<p class="hide-if-js">您好，冰雪风谷 | <a href="profile.php" title="编辑您的个人资料">我的个人资料</a> | <a href="http://www.code-trick.com/wp-login.php?action=logout&amp;_wpnonce=7129aa7d34" title="登出">登出</a></p>
+
+	<div class="hide-if-no-js">
+		<p>您好，冰雪风谷</p>
+		<div id="user_info_arrow"></div>
+		<div id="user_info_links_wrap"><div id="user_info_links">
+			<ul><li><a href="profile.php" title="编辑您的个人资料">我的个人资料</a></li><li><a href="http://www.code-trick.com/wp-login.php?action=logout&amp;_wpnonce=7129aa7d34" title="登出">登出</a></li></ul>
+		</div></div>
+	</div>
+</div>
+</div>
+
+</div>
+
+<div id="wpbody">
+
+<div id="wpbody-content">
+<div id="screen-meta">
+<div id="screen-options-wrap" class="hidden">
+	<form id="adv-settings" action="" method="post">
+			<h5>显示下列项目</h5>
+		<div class="metabox-prefs">
+			<label for="formatdiv-hide"><input class="hide-postbox-tog" name="formatdiv-hide" type="checkbox" id="formatdiv-hide" value="formatdiv" checked="checked" />形式</label>
+<label for="categorydiv-hide"><input class="hide-postbox-tog" name="categorydiv-hide" type="checkbox" id="categorydiv-hide" value="categorydiv" checked="checked" />分类目录</label>
+<label for="tagsdiv-post_tag-hide"><input class="hide-postbox-tog" name="tagsdiv-post_tag-hide" type="checkbox" id="tagsdiv-post_tag-hide" value="tagsdiv-post_tag" checked="checked" />文章标签</label>
+<label for="postimagediv-hide"><input class="hide-postbox-tog" name="postimagediv-hide" type="checkbox" id="postimagediv-hide" value="postimagediv" checked="checked" />特色图像</label>
+<label for="postexcerpt-hide"><input class="hide-postbox-tog" name="postexcerpt-hide" type="checkbox" id="postexcerpt-hide" value="postexcerpt" />摘要</label>
+<label for="trackbacksdiv-hide"><input class="hide-postbox-tog" name="trackbacksdiv-hide" type="checkbox" id="trackbacksdiv-hide" value="trackbacksdiv" />发送 trackback</label>
+<label for="postcustom-hide"><input class="hide-postbox-tog" name="postcustom-hide" type="checkbox" id="postcustom-hide" value="postcustom" />自定义栏目</label>
+<label for="commentstatusdiv-hide"><input class="hide-postbox-tog" name="commentstatusdiv-hide" type="checkbox" id="commentstatusdiv-hide" value="commentstatusdiv" />讨论</label>
+<label for="slugdiv-hide"><input class="hide-postbox-tog" name="slugdiv-hide" type="checkbox" id="slugdiv-hide" value="slugdiv" />别名</label>
+			<br class="clear" />
+		</div>
+		<h5>页面布局</h5>
+<div class='columns-prefs'>分栏数目：
+<label><input type='radio' name='screen_columns' value='1' /> 1</label>
+<label><input type='radio' name='screen_columns' value='2' checked='checked' /> 2</label>
+</div>
+<div><input type="hidden" id="screenoptionnonce" name="screenoptionnonce" value="322738097d" /></div>
+</form>
+</div>
+
+	<div id="contextual-help-wrap" class="hidden">
+	<div class="metabox-prefs"><p>标题区域和文章编辑区域的位置是固定的，但您可以通过拖拽来重新排列其它模块。点击模块标题可以最小化或展开模块。一些模块是默认隐藏的，您也可以使用“显示选项”在页面中取消隐藏这些模块（摘要、发送 trackback、自定义栏目、讨论、别名，和作者）。您还可以将本页面的布局在一栏和两栏之间进行切换。</p><p><strong>标题</strong> - 为您的文章键入一个标题。之后，您将看到一个固定链接地址，它是可以编辑的。</p><p><strong>文章编辑器</strong> - 键入您文章的文本。编辑器有两种编辑模式：可视化和 HTML。点击相应的标签可进行切换。可视化模式显示所见即所得编辑器。点击工具栏最后一个图标可以展开第二行控制按钮；在 HTML 模式中，您可以输入原始 HTML 标签和文章文本。点击文章编辑器上方的图标可以向文章插入多媒体文件。在 3.2 版本中，新增了“全屏写作界面”，您可以通过“可视化”模式中的“全屏”图标（第一行倒数第二个）来使用该界面。进入该界面后，将鼠标移至上方，控制按钮就会显示出来。点击“退出全屏”可重新使用标准编辑界面。</p><p><strong>发布</strong> - 您可以在“发布”区域设置文章的属性。点击“状态”、“可见性”、“发布”右侧的“编辑”按钮，可以调整更多设置。可见性设置包括密码保护和文章置顶；通过设置发布选项，可实现定时发布功能。</p><p><strong>文章形式</strong> - 该选项决定主题应如何显示您的某篇文章。通常，主题对于“标准”文章，会正常显示标题和段落；而对于“日志”式文章，则通常不显示标题。请浏览 Codex 文档来查看<a href="http://codex.wordpress.org/zh-cn:%E6%96%87%E7%AB%A0%E5%BD%A2%E5%BC%8F#.E6.94.AF.E6.8C.81.E7.9A.84.E5.BD.A2.E5.BC.8F">每种文章形式的介绍</a>。您的主题或许会支持全部 10 种文章形式，或只支持其中的一些。</p><p><strong>特色图片</strong> - 为文章配上一张特色图片。若您的主题具有“特色图片”功能，这张图片可能会显示在首页、页面顶端等位置。</p><p><strong>发送 trackback</strong> - Trackback 是通知旧博客系统您已链接至它们的一种方式。请输入希望发送 trackback 至哪个（哪些） URL。如果您链接到的是其他 WordPress 站点，则无须填写此栏，这些站点将自动通过 pingback 方式通知。</p><p><strong>讨论</strong> - 您可以设置评论和引用通告的开关。若该篇文章有评论，您可以在这里浏览、审核评论。</p><p>您亦可通过<a href="options-writing.php">快速发布书签</a>来创建文章。</p><p><strong>更多信息：</strong></p><p><a href="http://codex.wordpress.org/zh-cn:%E6%96%87%E7%AB%A0_%E5%86%99%E6%96%87%E7%AB%A0%E9%A1%B5%E9%9D%A2" target="_blank">关于撰写和编辑文章的中文文档</a></p><p><a href="http://cn.forums.wordpress.org" target="_blank">中文支持论坛</a></p></div>
+	</div>
+
+<div id="screen-meta-links">
+<div id="contextual-help-link-wrap" class="hide-if-no-js screen-meta-toggle">
+<a href="#contextual-help" id="contextual-help-link" class="show-settings">帮助</a>
+</div>
+<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+<a href="#screen-options" id="show-settings-link" class="show-settings">显示选项</a>
+</div>
+</div>
+</div>
+
+<div class="wrap">
+<div id="icon-edit" class="icon32 icon32-posts-post"><br /></div><h2>撰写新文章</h2>
+<form name="post" action="post.php" method="post" id="post">
+<input type="hidden" id="_wpnonce" name="_wpnonce" value="7020c42935" /><input type="hidden" name="_wp_http_referer" value="/wp-admin/post-new.php" /><input type="hidden" id="user-id" name="user_ID" value="4" />
+<input type="hidden" id="hiddenaction" name="action" value="editpost" />
+<input type="hidden" id="originalaction" name="originalaction" value="editpost" />
+<input type="hidden" id="post_author" name="post_author" value="4" />
+<input type="hidden" id="post_type" name="post_type" value="post" />
+<input type="hidden" id="original_post_status" name="original_post_status" value="auto-draft" />
+<input type="hidden" id="referredby" name="referredby" value="http://www.code-trick.com/wp-admin/edit.php" />
+<input type="hidden" name="_wp_original_http_referer" value="http://www.code-trick.com/wp-admin/edit.php" /><input type='hidden' id='auto_draft' name='auto_draft' value='1' /><input type='hidden' id='post_ID' name='post_ID' value='162' /><input type="hidden" id="autosavenonce" name="autosavenonce" value="98185fa547" /><input type="hidden" id="meta-box-order-nonce" name="meta-box-order-nonce" value="9875081556" /><input type="hidden" id="closedpostboxesnonce" name="closedpostboxesnonce" value="aa4987be84" />
+<div id="poststuff" class="metabox-holder has-right-sidebar">
+<div id="side-info-column" class="inner-sidebar">
+
+<div id="side-sortables" class="meta-box-sortables"><div id="submitdiv" class="postbox " >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>发布</span></h3>
+<div class="inside">
+<div class="submitbox" id="submitpost">
+
+<div id="minor-publishing">
+
+<div style="display:none;">
+<p class="submit"><input type="submit" name="save" id="save" class="button" value="保存"  /></p></div>
+
+<div id="minor-publishing-actions">
+<div id="save-action">
+<input  type="submit" name="save" id="save-post" value="保存草稿" tabindex="4" class="button button-highlighted" />
+<img src="http://www.code-trick.com/wp-admin/images/wpspin_light.gif" class="ajax-loading" id="draft-ajax-loading" alt="" />
+</div>
+
+<div id="preview-action">
+<a class="preview button" href="http://www.code-trick.com/?p=162&#038;preview=true" target="wp-preview" id="post-preview" tabindex="4">预览</a>
+<input type="hidden" name="wp-preview" id="wp-preview" value="" />
+</div>
+
+<div class="clear"></div>
+</div>
+<div id="misc-publishing-actions">
+
+<div class="misc-pub-section"><label for="post_status">状态：</label>
+<span id="post-status-display">
+草稿</span>
+<a href="#post_status" class="edit-post-status hide-if-no-js" tabindex='4'>编辑</a>
+
+<div id="post-status-select" class="hide-if-js">
+<input type="hidden" name="hidden_post_status" id="hidden_post_status" value="draft" />
+<select name='post_status' id='post_status' tabindex='4'>
+<option value='pending'>等待复审</option>
+<option selected='selected' value='draft'>草稿</option>
+</select>
+ <a href="#post_status" class="save-post-status hide-if-no-js button">确定</a>
+ <a href="#post_status" class="cancel-post-status hide-if-no-js">取消</a>
+</div>
+
+</div>
+<div class="misc-pub-section " id="visibility">
+公开度： <span id="post-visibility-display">公开</span>
+<a href="#visibility" class="edit-visibility hide-if-no-js">编辑</a>
+
+<div id="post-visibility-select" class="hide-if-js">
+<input type="hidden" name="hidden_post_password" id="hidden-post-password" value="" />
+<input type="checkbox" style="display:none" name="hidden_post_sticky" id="hidden-post-sticky" value="sticky"  />
+<input type="hidden" name="hidden_post_visibility" id="hidden-post-visibility" value="public" />
+
+
+<input type="radio" name="visibility" id="visibility-radio-public" value="public"  checked='checked' /> <label for="visibility-radio-public" class="selectit">公开</label><br />
+<input type="radio" name="visibility" id="visibility-radio-password" value="password"  /> <label for="visibility-radio-password" class="selectit">密码保护</label><br />
+<span id="password-span"><label for="post_password">密码：</label> <input type="text" name="post_password" id="post_password" value="" /><br /></span>
+<input type="radio" name="visibility" id="visibility-radio-private" value="private"  /> <label for="visibility-radio-private" class="selectit">私密</label><br />
+
+<p>
+ <a href="#visibility" class="save-post-visibility hide-if-no-js button">确定</a>
+ <a href="#visibility" class="cancel-post-visibility hide-if-no-js">取消</a>
+</p>
+</div>
+
+</div>
+<div class="misc-pub-section curtime misc-pub-section-last">
+	<span id="timestamp">
+	<b>立即</b>发布</span>
+	<a href="#edit_timestamp" class="edit-timestamp hide-if-no-js" tabindex='4'>编辑</a>
+	<div id="timestampdiv" class="hide-if-js"><div class="timestamp-wrap"><input type="text" id="aa" name="aa" value="2011" size="4" maxlength="4" tabindex="4" autocomplete="off" />年<select id="mm" name="mm" tabindex="4">
+			<option value="01">一</option>
+			<option value="02">二</option>
+			<option value="03">三</option>
+			<option value="04">四</option>
+			<option value="05">五</option>
+			<option value="06">六</option>
+			<option value="07">七</option>
+			<option value="08">八</option>
+			<option value="09">九</option>
+			<option value="10">十</option>
+			<option value="11">十一</option>
+			<option value="12" selected="selected">十二</option>
+</select>月<input type="text" id="jj" name="jj" value="08" size="2" maxlength="2" tabindex="4" autocomplete="off" />日 <input type="text" id="hh" name="hh" value="17" size="2" maxlength="2" tabindex="4" autocomplete="off" /> : <input type="text" id="mn" name="mn" value="09" size="2" maxlength="2" tabindex="4" autocomplete="off" /></div><input type="hidden" id="ss" name="ss" value="46" />
+
+<input type="hidden" id="hidden_mm" name="hidden_mm" value="12" />
+<input type="hidden" id="cur_mm" name="cur_mm" value="12" />
+<input type="hidden" id="hidden_jj" name="hidden_jj" value="08" />
+<input type="hidden" id="cur_jj" name="cur_jj" value="08" />
+<input type="hidden" id="hidden_aa" name="hidden_aa" value="2011" />
+<input type="hidden" id="cur_aa" name="cur_aa" value="2011" />
+<input type="hidden" id="hidden_hh" name="hidden_hh" value="17" />
+<input type="hidden" id="cur_hh" name="cur_hh" value="17" />
+<input type="hidden" id="hidden_mn" name="hidden_mn" value="09" />
+<input type="hidden" id="cur_mn" name="cur_mn" value="09" />
+
+<p>
+<a href="#edit_timestamp" class="save-timestamp hide-if-no-js button">确定</a>
+<a href="#edit_timestamp" class="cancel-timestamp hide-if-no-js">取消</a>
+</p>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+
+<div id="major-publishing-actions">
+<div id="delete-action">
+<a class="submitdelete deletion" href="http://www.code-trick.com/wp-admin/post.php?post=162&amp;action=trash&amp;_wpnonce=09b45e87c7">移至回收站</a></div>
+
+<div id="publishing-action">
+<img src="http://www.code-trick.com/wp-admin/images/wpspin_light.gif" class="ajax-loading" id="ajax-loading" alt="" />
+		<input name="original_publish" type="hidden" id="original_publish" value="发布" />
+		<input type="submit" name="publish" id="publish" class="button-primary" value="发布" tabindex="5" accesskey="p"  /></div>
+<div class="clear"></div>
+</div>
+</div>
+
+</div>
+</div>
+<div id="formatdiv" class="postbox " >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>形式</span></h3>
+<div class="inside">
+	<div id="post-formats-select">
+		<input type="radio" name="post_format" class="post-format" id="post-format-0" value="0"  checked='checked' /> <label for="post-format-0">标准</label>
+				<br /><input type="radio" name="post_format" class="post-format" id="post-format-aside" value="aside"  /> <label for="post-format-aside">日志</label>
+				<br /><input type="radio" name="post_format" class="post-format" id="post-format-link" value="link"  /> <label for="post-format-link">链接</label>
+				<br /><input type="radio" name="post_format" class="post-format" id="post-format-gallery" value="gallery"  /> <label for="post-format-gallery">相册</label>
+				<br /><input type="radio" name="post_format" class="post-format" id="post-format-status" value="status"  /> <label for="post-format-status">状态</label>
+				<br /><input type="radio" name="post_format" class="post-format" id="post-format-quote" value="quote"  /> <label for="post-format-quote">引语</label>
+				<br /><input type="radio" name="post_format" class="post-format" id="post-format-image" value="image"  /> <label for="post-format-image">图像</label>
+		<br />
+	</div>
+	</div>
+</div>
+<div id="categorydiv" class="postbox " >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>分类目录</span></h3>
+<div class="inside">
+	<div id="taxonomy-category" class="categorydiv">
+		<ul id="category-tabs" class="category-tabs">
+			<li class="tabs"><a href="#category-all" tabindex="3">所有分类目录</a></li>
+			<li class="hide-if-no-js"><a href="#category-pop" tabindex="3">最常用</a></li>
+		</ul>
+
+		<div id="category-pop" class="tabs-panel" style="display: none;">
+			<ul id="categorychecklist-pop" class="categorychecklist form-no-clear" >
+				
+		<li id="popular-category-14" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-14" type="checkbox"  value="14" />
+				编程语言			</label>
+		</li>
+
+		
+		<li id="popular-category-20" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-20" type="checkbox"  value="20" />
+				C			</label>
+		</li>
+
+		
+		<li id="popular-category-21" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-21" type="checkbox"  value="21" />
+				PHP			</label>
+		</li>
+
+		
+		<li id="popular-category-17" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-17" type="checkbox"  value="17" />
+				GCC			</label>
+		</li>
+
+		
+		<li id="popular-category-15" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-15" type="checkbox"  value="15" />
+				编译器			</label>
+		</li>
+
+		
+		<li id="popular-category-16" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-16" type="checkbox"  value="16" />
+				操作系统			</label>
+		</li>
+
+		
+		<li id="popular-category-26" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-26" type="checkbox"  value="26" />
+				Python			</label>
+		</li>
+
+		
+		<li id="popular-category-27" class="popular-category">
+			<label class="selectit">
+			<input id="in-popular-category-27" type="checkbox"  value="27" />
+				Erlang			</label>
+		</li>
+
+					</ul>
+		</div>
+
+		<div id="category-all" class="tabs-panel">
+			<input type='hidden' name='post_category[]' value='0' />			<ul id="categorychecklist" class="list:category categorychecklist form-no-clear">
+				
+<li id='category-1'><label class="selectit"><input value="1" type="checkbox" name="post_category[]" id="in-category-1" /> Uncategorized</label></li>
+
+<li id='category-16' class="popular-category"><label class="selectit"><input value="16" type="checkbox" name="post_category[]" id="in-category-16" /> 操作系统</label><ul class='children'>
+
+<li id='category-6'><label class="selectit"><input value="6" type="checkbox" name="post_category[]" id="in-category-6" /> Linux</label></li>
+</ul>
+</li>
+
+<li id='category-14' class="popular-category"><label class="selectit"><input value="14" type="checkbox" name="post_category[]" id="in-category-14" /> 编程语言</label><ul class='children'>
+
+<li id='category-20' class="popular-category"><label class="selectit"><input value="20" type="checkbox" name="post_category[]" id="in-category-20" /> C</label></li>
+
+<li id='category-27' class="popular-category"><label class="selectit"><input value="27" type="checkbox" name="post_category[]" id="in-category-27" /> Erlang</label></li>
+
+<li id='category-21' class="popular-category"><label class="selectit"><input value="21" type="checkbox" name="post_category[]" id="in-category-21" /> PHP</label></li>
+
+<li id='category-26' class="popular-category"><label class="selectit"><input value="26" type="checkbox" name="post_category[]" id="in-category-26" /> Python</label></li>
+</ul>
+</li>
+
+<li id='category-15' class="popular-category"><label class="selectit"><input value="15" type="checkbox" name="post_category[]" id="in-category-15" /> 编译器</label><ul class='children'>
+
+<li id='category-17' class="popular-category"><label class="selectit"><input value="17" type="checkbox" name="post_category[]" id="in-category-17" /> GCC</label></li>
+</ul>
+</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+</div>
+<div id="tagsdiv-post_tag" class="postbox " >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>文章标签</span></h3>
+<div class="inside">
+<div class="tagsdiv" id="post_tag">
+	<div class="jaxtag">
+	<div class="nojs-tags hide-if-js">
+	<p>添加或删除标签</p>
+	<textarea name="tax_input[post_tag]" rows="3" cols="20" class="the-tags" id="tax-input-post_tag" ></textarea></div>
+ 		<div class="ajaxtag hide-if-no-js">
+		<label class="screen-reader-text" for="new-tag-post_tag">文章标签</label>
+		<div class="taghint">添加新标签</div>
+		<p><input type="text" id="new-tag-post_tag" name="newtag[post_tag]" class="newtag form-input-tip" size="16" autocomplete="off" value="" />
+		<input type="button" class="button tagadd" value="添加" tabindex="3" /></p>
+	</div>
+	<p class="howto">多个标签请用英文逗号（,）分开</p>
+		</div>
+	<div class="tagchecklist"></div>
+</div>
+<p class="hide-if-no-js"><a href="#titlediv" class="tagcloud-link" id="link-post_tag">从常用标签中选择</a></p>
+</div>
+</div>
+<div id="postimagediv" class="postbox " >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>特色图像</span></h3>
+<div class="inside">
+<p class="hide-if-no-js"><a title="设置特色图像" href="media-upload.php?post_id=162&#038;type=image&#038;TB_iframe=1" id="set-post-thumbnail" class="thickbox">设置特色图像</a></p></div>
+</div>
+</div></div>
+
+<div id="post-body">
+<div id="post-body-content">
+<div id="titlediv">
+<div id="titlewrap">
+	<label class="hide-if-no-js" style="visibility:hidden" id="title-prompt-text" for="title">在此键入标题</label>
+	<input type="text" name="post_title" size="30" tabindex="1" value="" id="title" autocomplete="off" />
+</div>
+<div class="inside">
+	<div id="edit-slug-box">
+		</div>
+</div>
+<input type="hidden" id="samplepermalinknonce" name="samplepermalinknonce" value="5b7a3562de" /></div>
+
+<div id="postdivrich" class="postarea">
+
+	<div id="editor-toolbar">
+		<div class="zerosize"><input accesskey="e" type="button" onclick="switchEditors.go('content')" /></div>
+			<a id="edButtonHTML" class="hide-if-no-js" onclick="switchEditors.go('content', 'html');">HTML</a>
+			<a id="edButtonPreview" class="active hide-if-no-js" onclick="switchEditors.go('content', 'tinymce');">可视化</a>
+		<div id="media-buttons" class="hide-if-no-js">
+上传或插入 <a href='media-upload.php?post_id=162&#038;type=image&#038;TB_iframe=1' id='add_image' class='thickbox' title='添加图像'><img src='http://www.code-trick.com/wp-admin/images/media-button-image.gif?ver=20100531' alt='添加图像' onclick='return false;' /></a><a href='media-upload.php?post_id=162&#038;type=video&#038;TB_iframe=1' id='add_video' class='thickbox' title='添加视频'><img src='http://www.code-trick.com/wp-admin/images/media-button-video.gif?ver=20100531' alt='添加视频' onclick='return false;' /></a><a href='media-upload.php?post_id=162&#038;type=audio&#038;TB_iframe=1' id='add_audio' class='thickbox' title='添加音频'><img src='http://www.code-trick.com/wp-admin/images/media-button-music.gif?ver=20100531' alt='添加音频' onclick='return false;' /></a><a href='media-upload.php?post_id=162&#038;TB_iframe=1' id='add_media' class='thickbox' title='添加媒体'><img src='http://www.code-trick.com/wp-admin/images/media-button-other.gif?ver=20100531' alt='添加媒体' onclick='return false;' /></a>		</div>
+	</div>
+	<div id="quicktags"><script type='text/javascript'>
+/* <![CDATA[ */
+var quicktagsL10n = {
+	quickLinks: "(快捷链接)",
+	wordLookup: "输入关键词以查询：",
+	dictionaryLookup: "查字典",
+	lookup: "查阅",
+	closeAllOpenTags: "关闭所有打开的标签",
+	closeTags: "关闭标签",
+	enterURL: "输入 URL",
+	enterImageURL: "输入图像 URL",
+	enterImageDescription: "为图像输入描述",
+	fullscreen: "全屏",
+	toggleFullscreen: "切换全屏模式"
+};
+try{convertEntities(quicktagsL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/quicktags.js?ver=20110502'></script>
+	<script type="text/javascript">edToolbar()</script>
+	</div>
+
+<div id='editorcontainer'><textarea rows='20' class='theEditor' cols='40' name='content' tabindex='2' id='content'></textarea></div>
+	<script type="text/javascript">
+	edCanvas = document.getElementById('content');
+	</script>
+
+<table id="post-status-info" cellspacing="0"><tbody><tr>
+	<td id="wp-word-count">字数：<span class="word-count">0</span></td>
+	<td class="autosave-info">
+	<span class="autosave-message">&nbsp;</span>
+	</td>
+</tr></tbody></table>
+
+</div>
+
+<div id="normal-sortables" class="meta-box-sortables"><div id="postexcerpt" class="postbox  hide-if-js" >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>摘要</span></h3>
+<div class="inside">
+<label class="screen-reader-text" for="excerpt">摘要</label><textarea rows="1" cols="40" name="excerpt" tabindex="6" id="excerpt"></textarea>
+<p>摘要是您可以手动添加的内容概要，一些主题会用到这些文字。<a href="http://codex.wordpress.org/zh-cn:%E6%91%98%E8%A6%81" target="_blank">了解关于人工摘要的更多信息。</a></p>
+</div>
+</div>
+<div id="trackbacksdiv" class="postbox  hide-if-js" >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>发送 trackback</span></h3>
+<div class="inside">
+<p><label for="trackback_url">发送 trackback 到：</label> <input type="text" name="trackback_url" id="trackback_url" class="code" tabindex="7" value="" /><br /> (多个 URL 用空格分隔)</p>
+<p>Trackback 是针对老式博客系统的一种引用通知方式。如果文章内的链接指向同为 WordPress 的站点，则您无需手动填写 <a href="http://codex.wordpress.org/zh-cn:%E5%8D%9A%E5%AE%A2%E7%BB%AA%E8%AE%BA#.E7.AE.A1.E7.90.86.E8.AF.84.E8.AE.BA" target="_blank">pingback</a> 地址。</p>
+</div>
+</div>
+<div id="postcustom" class="postbox  hide-if-js" >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>自定义栏目</span></h3>
+<div class="inside">
+<div id="postcustomstuff">
+<div id="ajax-response"></div>
+
+<table id="list-table" style="display: none;">
+	<thead>
+	<tr>
+		<th class="left">名称</th>
+		<th>值</th>
+	</tr>
+	</thead>
+	<tbody id="the-list" class="list:meta">
+	<tr><td></td></tr>
+	</tbody>
+</table><p><strong>添加自定义栏目：</strong></p>
+<table id="newmeta">
+<thead>
+<tr>
+<th class="left"><label for="metakeyselect">名称</label></th>
+<th><label for="metavalue">值</label></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td id="newmetaleft" class="left">
+<input type="text" id="metakeyinput" name="metakeyinput" tabindex="7" value="" />
+</td>
+<td><textarea id="metavalue" name="metavalue" rows="2" cols="25" tabindex="8"></textarea></td>
+</tr>
+
+<tr><td colspan="2" class="submit">
+<input type="submit" name="addmeta" id="addmetasub" class="add:the-list:newmeta" value="添加自定义栏目" tabindex="9"  /><input type="hidden" id="_ajax_nonce-add-meta" name="_ajax_nonce-add-meta" value="dd952570a7" /></td></tr>
+</tbody>
+</table>
+</div>
+<p>自定义栏目用来向文章添加额外的属性，您可以<a href="http://codex.wordpress.org/zh-cn:%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%8F%E7%9B%AE" target="_blank">在主题中使用它们</a>。</p>
+</div>
+</div>
+<div id="commentstatusdiv" class="postbox  hide-if-js" >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>讨论</span></h3>
+<div class="inside">
+<input name="advanced_view" type="hidden" value="1" />
+<p class="meta-options">
+	<label for="comment_status" class="selectit"><input name="comment_status" type="checkbox" id="comment_status" value="open"  checked='checked' /> 允许评论。</label><br />
+	<label for="ping_status" class="selectit"><input name="ping_status" type="checkbox" id="ping_status" value="open"  checked='checked' /> 这个页面接受 <a href="http://codex.wordpress.org/zh-cn:%E5%8D%9A%E5%AE%A2%E7%BB%AA%E8%AE%BA#.E7.AE.A1.E7.90.86.E8.AF.84.E8.AE.BA" target="_blank">trackback 和 pingback</a>。</label>
+	</p>
+</div>
+</div>
+<div id="slugdiv" class="postbox  hide-if-js" >
+<div class="handlediv" title="点击以切换"><br /></div><h3 class='hndle'><span>别名</span></h3>
+<div class="inside">
+<label class="screen-reader-text" for="post_name">别名</label><input name="post_name" type="text" size="13" id="post_name" value="" />
+</div>
+</div>
+</div><div id="advanced-sortables" class="meta-box-sortables"></div>
+</div>
+</div>
+<br class="clear" />
+</div><!-- /poststuff -->
+</form>
+</div>
+
+<form method="get" action="">
+<table style="display:none;"><tbody id="com-reply"><tr id="replyrow" style="display:none;"><td colspan="2" class="colspanchange">
+	<div id="replyhead" style="display:none;">回复评论</div>
+
+	<div id="edithead" style="display:none;">
+		<div class="inside">
+		<label for="author">姓名</label>
+		<input type="text" name="newcomment_author" size="50" value="" tabindex="101" id="author" />
+		</div>
+
+		<div class="inside">
+		<label for="author-email">电子邮件</label>
+		<input type="text" name="newcomment_author_email" size="50" value="" tabindex="102" id="author-email" />
+		</div>
+
+		<div class="inside">
+		<label for="author-url">URL</label>
+		<input type="text" id="author-url" name="newcomment_author_url" size="103" value="" tabindex="103" />
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+
+	<div id="replycontainer"><textarea rows="8" cols="40" name="replycontent" tabindex="104" id="replycontent"></textarea></div>
+
+	<p id="replysubmit" class="submit">
+	<a href="#comments-form" class="cancel button-secondary alignleft" tabindex="106">取消</a>
+	<a href="#comments-form" class="save button-primary alignright" tabindex="104">
+	<span id="savebtn" style="display:none;">更新评论</span>
+	<span id="replybtn" style="display:none;">提交回复</span></a>
+	<img class="waiting" style="display:none;" src="http://www.code-trick.com/wp-admin/images/wpspin_light.gif" alt="" />
+	<span class="error" style="display:none;"></span>
+	<br class="clear" />
+	</p>
+
+	<input type="hidden" name="user_ID" id="user_ID" value="4" />
+	<input type="hidden" name="action" id="action" value="" />
+	<input type="hidden" name="comment_ID" id="comment_ID" value="" />
+	<input type="hidden" name="comment_post_ID" id="comment_post_ID" value="" />
+	<input type="hidden" name="status" id="status" value="" />
+	<input type="hidden" name="position" id="position" value="1" />
+	<input type="hidden" name="checkbox" id="checkbox" value="0" />
+	<input type="hidden" name="mode" id="mode" value="single" />
+	<input type="hidden" id="_ajax_nonce-replyto-comment" name="_ajax_nonce-replyto-comment" value="665eb30420" />	</td></tr></tbody></table>
+</form>
+
+<script type="text/javascript">
+try{document.post.title.focus();}catch(e){}
+</script>
+
+<div class="clear"></div></div><!-- wpbody-content -->
+<div class="clear"></div></div><!-- wpbody -->
+<div class="clear"></div></div><!-- wpcontent -->
+
+<div id="footer">
+<p id="footer-left" class="alignleft"><span id="footer-thankyou">感谢使用 <a href="http://cn.wordpress.org/">WordPress</a> 进行创作</span> &bull; <a href="http://codex.wordpress.org/zh-cn:WordPress_%E5%AE%98%E6%96%B9%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3">文档</a> &bull; <a href="http://www.code-trick.com/wp-admin/freedoms.php">您的自由</a> &bull; <a href="http://zh-cn.forums.wordpress.org/forum/issues">反馈</a> &bull; <a href="http://www.code-trick.com/wp-admin/credits.php">鸣谢</a></p>
+<p id="footer-upgrade" class="alignright">3.2.1 版本</p>
+<div class="clear"></div>
+</div>
+<script type='text/javascript'>list_args = {"class":"WP_Post_Comments_List_Table","screen":{"id":"post","base":"post","action":"add","post_type":"post","is_network":false,"is_user":false,"parent_file":"edit.php","parent_base":"edit"}};</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var commonL10n = {
+	warnDelete: "您将永久删除所选项目。\n 点击“取消”停止，点击“确定”删除。"
+};
+try{convertEntities(commonL10n);}catch(e){};
+var wpAjax = {
+	noPerm: "您无权执行此操作。",
+	broken: "发生了无法识别的错误。"
+};
+try{convertEntities(wpAjax);}catch(e){};
+var autosaveL10n = {
+	autosaveInterval: "60",
+	savingText: "正在保存草稿 &#8230;",
+	saveAlert: "离开这个页面，您所做的更改将丢失。"
+};
+try{convertEntities(autosaveL10n);}catch(e){};
+var postL10n = {
+	tagsUsed: "这篇文章上的标签：",
+	add: "添加",
+	addTag: "添加新标签",
+	separate: "多个标签请用英文逗号（,）分开",
+	ok: "确定",
+	cancel: "取消",
+	edit: "编辑",
+	publishOn: "发布于：",
+	publishOnFuture: "定时：",
+	publishOnPast: "发布于：",
+	showcomm: "显示更多评论",
+	endcomm: "已无更多评论。",
+	publish: "发布",
+	schedule: "定时",
+	update: "更新",
+	savePending: "保存并提请审核",
+	saveDraft: "保存草稿",
+	private: "私密",
+	public: "公开",
+	publicSticky: "公开、置顶",
+	password: "密码保护",
+	privatelyPublished: "私密、已发布",
+	published: "已发布"
+};
+try{convertEntities(postL10n);}catch(e){};
+var thickboxL10n = {
+	next: "下一页 &gt;",
+	prev: "&lt; 上一页",
+	image: "图像",
+	of: "/",
+	close: "关闭",
+	noiframes: "这个功能需要 iframe 的支持。您可能禁止了 iframe 的显示，或您的浏览器不支持此功能。",
+	loadingAnimation: "http://www.code-trick.com/wp-includes/js/thickbox/loadingAnimation.gif",
+	closeImage: "http://www.code-trick.com/wp-includes/js/thickbox/tb-close.png"
+};
+try{convertEntities(thickboxL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-admin/load-scripts.php?c=0&amp;load=hoverIntent,common,jquery-color,schedule,wp-ajax-response,autosave,suggest,wp-lists,jquery-ui-core,jquery-ui-widget,jquery-ui-mouse,jquery-ui-sortable,postbox,post,thickbox,media-upload&amp;ver=87a4c4284991be39a40fcf5225c50d94'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-admin/js/editor.js?ver=20110411'></script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+tinyMCEPreInit = {
+	base : "http://www.code-trick.com/wp-includes/js/tinymce",
+	suffix : "",
+	query : "ver=342-20110630",
+	mceInit : {mode:"specific_textareas", editor_selector:"theEditor", width:"100%", theme:"advanced", skin:"wp_theme", theme_advanced_buttons1:"bold,italic,strikethrough,|,bullist,numlist,blockquote,|,justifyleft,justifycenter,justifyright,|,link,unlink,wp_more,|,spellchecker,fullscreen,wp_adv", theme_advanced_buttons2:"formatselect,underline,justifyfull,forecolor,|,pastetext,pasteword,removeformat,|,charmap,|,outdent,indent,|,undo,redo,wp_help", theme_advanced_buttons3:"", theme_advanced_buttons4:"", language:"zh", spellchecker_languages:"+English=en,Danish=da,Dutch=nl,Finnish=fi,French=fr,German=de,Italian=it,Polish=pl,Portuguese=pt,Spanish=es,Swedish=sv", theme_advanced_toolbar_location:"top", theme_advanced_toolbar_align:"left", theme_advanced_statusbar_location:"bottom", theme_advanced_resizing:true, theme_advanced_resize_horizontal:false, dialog_type:"modal", formats:{
+			alignleft : [
+				{selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li', styles : {textAlign : 'left'}},
+				{selector : 'img,table', classes : 'alignleft'}
+			],
+			aligncenter : [
+				{selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li', styles : {textAlign : 'center'}},
+				{selector : 'img,table', classes : 'aligncenter'}
+			],
+			alignright : [
+				{selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li', styles : {textAlign : 'right'}},
+				{selector : 'img,table', classes : 'alignright'}
+			],
+			strikethrough : {inline : 'del'}
+		}, relative_urls:false, remove_script_host:false, convert_urls:false, apply_source_formatting:false, remove_linebreaks:true, gecko_spellcheck:true, keep_styles:false, entities:"38,amp,60,lt,62,gt", accessibility_focus:true, tabfocus_elements:"major-publishing-actions", media_strict:false, paste_remove_styles:true, paste_remove_spans:true, paste_strip_class_attributes:"all", paste_text_use_dialog:true, extended_valid_elements:"article[*],aside[*],audio[*],canvas[*],command[*],datalist[*],details[*],embed[*],figcaption[*],figure[*],footer[*],header[*],hgroup[*],keygen[*],mark[*],meter[*],nav[*],output[*],progress[*],section[*],source[*],summary,time[*],video[*],wbr", wpeditimage_disable_captions:false, wp_fullscreen_content_css:"http://www.code-trick.com/wp-includes/js/tinymce/plugins/wpfullscreen/css/wp-fullscreen.css", plugins:"inlinepopups,spellchecker,tabfocus,paste,media,wordpress,wpfullscreen,wpeditimage,wpgallery,wplink,wpdialogs", content_css:"http://www.code-trick.com/wp-content/themes/twentyeleven/editor-style.css"},
+	load_ext : function(url,lang){var sl=tinymce.ScriptLoader;sl.markDone(url+'/langs/'+lang+'.js');sl.markDone(url+'/langs/'+lang+'_dlg.js');}
+};
+/* ]]> */
+</script>
+
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/tinymce/tiny_mce.js?ver=342-20110630'></script>
+<script type='text/javascript'>
+tinyMCE.addI18n({zh:{
+common:{
+edit_confirm:"您希望在这个文本区域中使用所见即所得编辑模式吗？",
+apply:"应用",
+insert:"插入",
+update:"更新",
+cancel:"取消",
+close:"关闭",
+browse:"浏览",
+class_name:"类",
+not_set:"-- 未设置 --",
+clipboard_msg:"复制、剪切和粘帖在 Mozilla 和 Firefox 中无效。",
+clipboard_no_support:"目前不支持您的浏览器，请改用键盘快捷键。",
+popup_blocked:"抱歉，您的弹出窗口阻止器阻止了程序功能。为了使用这个工具的所有功能，您需要在这个站点上禁用阻止器。",
+invalid_data:"错误：输入的值无效。有问题的项目已经用红色标出。",
+invalid_data_number:"{#field} 中需要填写数字",
+invalid_data_min:"{#field} 的值必须大于 {#min}",
+invalid_data_size:"{#field} 必须填入数字或百分比",
+more_colors:"更多颜色"
+},
+colors:{
+"000000":"黑色",
+"993300":"焦橙",
+"333300":"深橄榄",
+"003300":"墨绿",
+"003366":"深蓝",
+"000080":"深蓝",
+"333399":"靛蓝",
+"333333":"特深灰",
+"800000":"紫褐",
+"FF6600":"橙色",
+"808000":"橄榄绿",
+"008000":"绿色",
+"008080":"蓝绿",
+"0000FF":"蓝色",
+"666699":"灰蓝",
+"808080":"灰色",
+"FF0000":"红色",
+"FF9900":"琥珀",
+"99CC00":"黄绿",
+"339966":"海绿",
+"33CCCC":"青绿",
+"3366FF":"品蓝",
+"800080":"紫色",
+"999999":"中度灰",
+"FF00FF":"紫红",
+"FFCC00":"金黄",
+"FFFF00":"黄色",
+"00FF00":"酸橙",
+"00FFFF":"湖绿",
+"00CCFF":"天蓝",
+"993366":"棕色",
+"C0C0C0":"银色",
+"FF99CC":"粉色",
+"FFCC99":"桃色",
+"FFFF99":"浅黄",
+"CCFFCC":"淡绿",
+"CCFFFF":"淡蓝",
+"99CCFF":"淡蓝",
+"CC99FF":"紫红",
+"FFFFFF":"白色"
+},
+contextmenu:{
+align:"对齐方式",
+left:"左",
+center:"中",
+right:"右",
+full:"占满"
+},
+insertdatetime:{
+date_fmt:"%Y-%m-%d",
+time_fmt:"%H:%M:%S",
+insertdate_desc:"插入日期",
+inserttime_desc:"插入时间",
+months_long:"一月,二月,三月,四月,五月,六月,七月,八月,九月,十月,十一月,十二月",
+months_short:"一,二,三,四,五,六,七,八,九,十,十一,十二",
+day_long:"星期日,星期一,星期二,星期三,星期四,星期五,星期六",
+day_short:"周日,周一,周二,周三,周四,周五,周六"
+},
+print:{
+print_desc:"打印"
+},
+preview:{
+preview_desc:"预览"
+},
+directionality:{
+ltr_desc:"从左到右",
+rtl_desc:"从右到左"
+},
+layer:{
+insertlayer_desc:"插入新层",
+forward_desc:"向前移动",
+backward_desc:"向后移动",
+absolute_desc:"切换绝对定位状态",
+content:"新层..."
+},
+save:{
+save_desc:"保存",
+cancel_desc:"取消所有更改"
+},
+nonbreaking:{
+nonbreaking_desc:"插入不截断空白符"
+},
+iespell:{
+iespell_desc:"执行拼写检查",
+download:"没有检测到 ieSpell。是否立刻安装？"
+},
+advhr:{
+advhr_desc:"水平标尺"
+},
+emotions:{
+emotions_desc:"表情"
+},
+searchreplace:{
+search_desc:"查找",
+replace_desc:"查找或替换"
+},
+advimage:{
+image_desc:"插入或编辑图像"
+},
+advlink:{
+link_desc:"插入或编辑链接"
+},
+xhtmlxtras:{
+cite_desc:"引用",
+abbr_desc:"缩写",
+acronym_desc:"首字母缩写",
+del_desc:"删除",
+ins_desc:"插入",
+attribs_desc:"插入或编辑属性"
+},
+style:{
+desc:"编辑 CSS 样式"
+},
+paste:{
+paste_text_desc:"以纯文本粘贴",
+paste_word_desc:"从 Word 中粘贴",
+selectall_desc:"全选",
+plaintext_mode_sticky:"当前处于纯文本粘贴模式。再次点击以切换回常规粘贴模式。在您粘贴一次文本之后也将自动回到常规粘贴模式。",
+plaintext_mode:"当前处于纯文本粘贴模式。再次点击以切换回常规粘贴模式。"
+},
+paste_dlg:{
+text_title:"使用 Ctrl+V 以将文本粘贴到窗口中。",
+text_linebreaks:"保留换行符",
+word_title:"使用 Ctrl+V 以将文本粘贴到窗口中。"
+},
+table:{
+desc:"插入新表格",
+row_before_desc:"在上方插入行",
+row_after_desc:"在下方插入行",
+delete_row_desc:"删除行",
+col_before_desc:"在前方插入列",
+col_after_desc:"在后方插入列",
+delete_col_desc:"删除列",
+split_cells_desc:"拆分合并的单元格",
+merge_cells_desc:"合并单元格",
+row_desc:"表格行属性",
+cell_desc:"单元格属性",
+props_desc:"表格属性",
+paste_row_before_desc:"在上方粘贴表格行",
+paste_row_after_desc:"在下方粘贴表格行",
+cut_row_desc:"剪切该行",
+copy_row_desc:"复制该行",
+del:"删除表格",
+row:"行",
+col:"列",
+cell:"单元格"
+},
+autosave:{
+unload_msg:"离开这个页面，您所做的更改将丢失。"
+},
+fullscreen:{
+desc:"切换全屏模式 (Alt+Shift+G)"
+},
+media:{
+desc:"插入或编辑内嵌媒体",
+edit:"编辑内嵌媒体"
+},
+fullpage:{
+desc:"文档属性"
+},
+template:{
+desc:"插入预设模板内容"
+},
+visualchars:{
+desc:"可视化控制字符开/关。"
+},
+spellchecker:{
+desc:"开/关拼写检查 (Alt+Shift+N)",
+menu:"拼写检查器设置",
+ignore_word:"忽略该词",
+ignore_words:"忽略所有词",
+langs:"语言",
+wait:"请稍等...",
+sug:"建议",
+no_sug:"无建议",
+no_mpell:"未发现拼写错误。",
+learn_word:"记住该词" 
+},
+pagebreak:{
+desc:"插入分页符"
+},
+advlist:{
+types:"类型",
+def:"默认",
+lower_alpha:"小写英文字母",
+lower_greek:"小写希腊字母",
+lower_roman:"小写罗马数字",
+upper_alpha:"大写英文字母",
+upper_roman:"大写罗马数字",
+circle:"空心圆",
+disc:"圆点",
+square:"实心方块"
+},
+aria:{
+rich_text_area:"富文本区域"
+},
+wordcount:{
+words:"词数： "
+}
+}});
+
+tinyMCE.addI18n("zh.advanced",{
+style_select:"样式",
+font_size:"字体大小",
+fontdefault:"字体",
+block:"格式",
+paragraph:"段落",
+div:"Div",
+address:"地址",
+pre:"预格式化",
+h1:"一级标题",
+h2:"二级标题",
+h3:"三级标题",
+h4:"四级标题",
+h5:"五级标题",
+h6:"六级标题",
+blockquote:"块引用",
+code:"代码",
+samp:"代码样例",
+dt:"术语",
+dd:"术语描述",
+bold_desc:"粗体 (Ctrl / Alt+Shift + B)",
+italic_desc:"斜体 (Ctrl / Alt+Shift + I)",
+underline_desc:"下划线",
+striketrough_desc:"删除线 (Alt+Shift+D)",
+justifyleft_desc:"左对齐 (Alt+Shift+L)",
+justifycenter_desc:"居中对齐 (Alt+Shift+C)",
+justifyright_desc:"右对齐 (Alt+Shift+R)",
+justifyfull_desc:"拉伸对齐 (Alt+Shift+J)",
+bullist_desc:"无序列表 (Alt+Shift+U)",
+numlist_desc:"有序列表 (Alt+Shift+O)",
+outdent_desc:"减少缩进量",
+indent_desc:"增加缩进量",
+undo_desc:"撤销 (Ctrl+Z)",
+redo_desc:"重做 (Ctrl+Y)",
+link_desc:"插入或编辑链接 (Alt+Shift+A)",
+unlink_desc:"取消链接 (Alt+Shift+S)",
+image_desc:"插入或编辑图像 (Alt+Shift+M)",
+cleanup_desc:"清理无用代码",
+code_desc:"编辑 HTML 源码",
+sub_desc:"下标",
+sup_desc:"上标",
+hr_desc:"插入横向分隔线",
+removeformat_desc:"去除格式",
+forecolor_desc:"选择文字颜色",
+backcolor_desc:"选择背景颜色",
+charmap_desc:"插入自定义字符",
+visualaid_desc:"显示/隐藏指导线和不可见元素",
+anchor_desc:"插入或编辑锚",
+cut_desc:"剪切",
+copy_desc:"复制",
+paste_desc:"粘帖",
+image_props_desc:"图像属性",
+newdocument_desc:"新文档",
+help_desc:"帮助",
+blockquote_desc:"块引用 (Alt+Shift+Q)",
+clipboard_msg:"复制、剪切和粘帖在 Mozilla 和 Firefox 中无效。",
+path:"路径",
+newdocument:"您确定要清除所有内容？",
+toolbar_focus:"跳到工具按钮 - Alt+Q；跳到编辑器 - Alt-Z；跳到元素路径 - Alt-X",
+more_colors:"更多颜色",
+shortcuts_desc:"可访问性帮助",
+help_shortcut:" 按 Alt-F10 开启工具栏；按 Alt-0 以获得帮助。",
+rich_text_area:"富文本区域",
+toolbar:"工具栏"
+});
+
+tinyMCE.addI18n("zh.advanced_dlg",{
+about_title:"关于 TinyMCE",
+about_general:"关于",
+about_help:"帮助",
+about_license:"许可协议",
+about_plugins:"插件",
+about_plugin:"插件",
+about_author:"作者",
+about_version:"版本",
+about_loaded:"已加载的插件",
+anchor_title:"插入或编辑锚",
+anchor_name:"锚名称",
+code_title:"HTML 源代码编辑器",
+code_wordwrap:"自动换行",
+colorpicker_title:"选择颜色",
+colorpicker_picker_tab:"拾色器",
+colorpicker_picker_title:"颜色选择器",
+colorpicker_palette_tab:"调色板",
+colorpicker_palette_title:"调色板颜色",
+colorpicker_named_tab:"已命名",
+colorpicker_named_title:"已命名颜色",
+colorpicker_color:"颜色：",
+colorpicker_name:"名称：",
+charmap_title:"选择自定义字符",
+image_title:"插入或编辑图像",
+image_src:"图像 URL",
+image_alt:"图像描述",
+image_list:"图像列表",
+image_border:"边框",
+image_dimensions:"尺寸",
+image_vspace:"垂直间隔",
+image_hspace:"水平间隔",
+image_align:"对齐方式",
+image_align_baseline:"基准线",
+image_align_top:"上",
+image_align_middle:"中",
+image_align_bottom:"下",
+image_align_texttop:"文本顶部",
+image_align_textbottom:"文本底部",
+image_align_left:"左",
+image_align_right:"右",
+link_title:"插入或编辑链接",
+link_url:"链接 URL",
+link_target:"打开方式",
+link_target_same:"在同一窗口打开链接",
+link_target_blank:"在新窗口中打开链接",
+link_titlefield:"标题",
+link_is_email:"您输入的似乎是个邮件地址，您要自动加上 mailto: 前缀么？",
+link_is_external:"您输入的似乎是个外部地址，您要自动加上 http:// 前缀么？",
+link_list:"链接列表",
+accessibility_help:"可访问性帮助",
+accessibility_usage_title:"常规用法"
+});
+
+tinyMCE.addI18n("zh.media_dlg",{
+title:"插入或编辑内嵌媒体",
+general:"常规",
+advanced:"高级",
+file:"文件或 URL",
+list:"列表",
+size:"尺寸",
+preview:"预览",
+constrain_proportions:"保持长宽比",
+type:"类型",
+id:"ID（Id）",
+name:"名称",
+class_name:"类",
+vspace:"纵向间隔（V-Space）",
+hspace:"横向间隔（H-Space）",
+play:"自动开始播放",
+loop:"循环",
+menu:"显示菜单",
+quality:"质量",
+scale:"缩放",
+align:"对齐",
+salign:"对齐方式（SAlign）",
+wmode:"窗口模式（WMode）",
+bgcolor:"背景",
+base:"根目录（Base）",
+flashvars:"传递给播放器的参数（Flashvars）",
+liveconnect:"首次加载时启动 Java（SWLiveConnect）",
+autohref:"立即加载（AutoHREF）",
+cache:"缓存",
+hidden:"隐藏",
+controller:"控制器",
+kioskmode:"Kiosk 模式",
+playeveryframe:"播放每一帧",
+targetcache:"目标缓存",
+correction:"无修正",
+enablejavascript:"启用 JavaScript",
+starttime:"开始时间",
+endtime:"结束时间",
+href:"href",
+qtsrcchokespeed:"限制速度",
+target:"打开方式",
+volume:"音量",
+autostart:"自动开始",
+enabled:"启用",
+fullscreen:"全屏",
+invokeurls:"调用 URL",
+mute:"静音",
+stretchtofit:"拉伸以适合",
+windowlessvideo:"无窗口视频",
+balance:"平衡",
+baseurl:"根目录 URL",
+captioningid:"标题 ID",
+currentmarker:"当前标记",
+currentposition:"当前位置",
+defaultframe:"默认帧",
+playcount:"播放计数",
+rate:"评级",
+uimode:"用户界面模式",
+flash_options:"Flash 选项",
+qt_options:"Quicktime 选项",
+wmp_options:"Windows media player 选项",
+rmp_options:"Real media player 选项",
+shockwave_options:"Shockwave 选项",
+autogotourl:"自动跳转到 URL",
+center:"中",
+imagestatus:"图像状态",
+maintainaspect:"保持比例",
+nojava:"无 java",
+prefetch:"预获取",
+shuffle:"随机",
+console:"控制台",
+numloop:"循环次数",
+controls:"控件",
+scriptcallbacks:"脚本回调",
+swstretchstyle:"拉伸方式",
+swstretchhalign:"水平拉伸（H-Align）",
+swstretchvalign:"垂直拉伸（H-Align）",
+sound:"声音",
+progress:"进度",
+qtsrc:"QT 源",
+qt_stream_warn:"必需在“高级”选项卡中的“QT 源”一栏添加 rtsp 流资源。",
+align_top:"上",
+align_right:"右",
+align_bottom:"下",
+align_left:"左",
+align_center:"中",
+align_top_left:"左上",
+align_top_right:"右上",
+align_bottom_left:"左下",
+align_bottom_right:"右下",
+flv_options:"Flash 视频选项",
+flv_scalemode:"缩放模式",
+flv_buffer:"缓冲",
+flv_startimage:"起始图像",
+flv_starttime:"开始时间",
+flv_defaultvolume:"默认音量",
+flv_hiddengui:"隐藏 GUI",
+flv_autostart:"自动开始",
+flv_loop:"循环",
+flv_showscalemodes:"显示缩放模式",
+flv_smoothvideo:"平滑视频",
+flv_jscallback:"JS 回调",
+html5_video_options:"HTML5 视频选项",
+altsource1:"备用源 1",
+altsource2:"备用源 2",
+preload:"预加载",
+poster:"海报",
+source:"源"
+});
+
+tinyMCE.addI18n("zh.wordpress",{
+wp_adv_desc:"显示或隐藏高级工具 (Alt+Shift+Z)",
+wp_more_desc:"插入“More”标签 (Alt+Shift+T)",
+wp_page_desc:"插入分页符 (Alt+Shift+P)",
+wp_help_desc:"帮助 (Alt+Shift+H)",
+wp_more_alt:"更多...",
+wp_page_alt:"下一页...",
+add_media:"添加媒体",
+add_image:"添加图像",
+add_video:"添加视频",
+add_audio:"添加音频",
+editgallery:"编辑相册",
+delgallery:"删除相册"
+});
+
+tinyMCE.addI18n("zh.wpeditimage",{
+edit_img:"编辑图像",
+del_img:"删除图像",
+adv_settings:"高级选项",
+none:"无",
+size:"尺寸",
+thumbnail:"缩略图",
+medium:"中等",
+full_size:"完整尺寸",
+current_link:"当前链接",
+link_to_img:"链接到图像",
+link_help:"输入一个链接 URL 或者点击上面选择预置方案。",
+adv_img_settings:"图像高级选项",
+source:"源",
+width:"宽度",
+height:"高度",
+orig_size:"原始尺寸",
+css:"CSS 类",
+adv_link_settings:"链接高级选项",
+link_rel:"链接 Rel",
+height:"高度",
+orig_size:"原始尺寸",
+css:"CSS 类",
+s60:"60%",
+s70:"70%",
+s80:"80%",
+s90:"90%",
+s100:"100%",
+s110:"110%",
+s120:"120%",
+s130:"130%",
+img_title:"标题",
+caption:"说明",
+alt:"替代文本"
+});
+
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function(){var t=tinyMCEPreInit,sl=tinymce.ScriptLoader,ln=t.mceInit.language,th=t.mceInit.theme,pl=t.mceInit.plugins;sl.markDone(t.base+'/langs/'+ln+'.js');sl.markDone(t.base+'/themes/'+th+'/langs/'+ln+'.js');sl.markDone(t.base+'/themes/'+th+'/langs/'+ln+'_dlg.js');tinymce.each(pl.split(','),function(n){if(n&&n.charAt(0)!='-'){sl.markDone(t.base+'/plugins/'+n+'/langs/'+ln+'.js');sl.markDone(t.base+'/plugins/'+n+'/langs/'+ln+'_dlg.js');}});})();
+tinyMCE.init(tinyMCEPreInit.mceInit);
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/jquery/ui.resizable.js?ver=1.8.12'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/jquery/ui.draggable.js?ver=1.8.12'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/jquery/ui.button.js?ver=1.8.12'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/jquery/ui.position.js?ver=1.8.12'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/jquery/ui.dialog.js?ver=1.8.12'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/tinymce/plugins/wpdialogs/js/wpdialog.js?ver=20110528'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/tinymce/plugins/wpdialogs/js/popup.js?ver=20110421'></script>
+<link rel='stylesheet' id='wp-jquery-ui-dialog-css'  href='http://www.code-trick.com/wp-includes/css/jquery-ui-dialog.css?ver=20101224' type='text/css' media='all' />
+<div style="display:none;"><form id="wp-link" tabindex="-1">
+<input type="hidden" id="_ajax_linking_nonce" name="_ajax_linking_nonce" value="98cf2016c0" /><div id="link-selector">
+	<div id="link-options">
+		<p class="howto">输入目标 URL</p>
+		<div>
+			<label><span>URL</span><input id="url-field" type="text" tabindex="10" name="href" /></label>
+		</div>
+		<div>
+			<label><span>标题</span><input id="link-title-field" type="text" tabindex="20" name="linktitle" /></label>
+		</div>
+		<div class="link-target">
+			<label><input type="checkbox" id="link-target-checkbox" tabindex="30" /> 在新窗口或标签页打开链接</label>
+		</div>
+	</div>
+		<p class="howto toggle-arrow " id="internal-toggle">或链接到站点中的内容</p>
+	<div id="search-panel" style="display:none">
+		<div class="link-search-wrapper">
+			<label>
+				<span>搜索</span>
+				<input type="text" id="search-field" class="link-search-field" tabindex="60" autocomplete="off" />
+				<img class="waiting" src="http://www.code-trick.com/wp-admin/images/wpspin_light.gif" alt="" />
+			</label>
+		</div>
+		<div id="search-results" class="query-results">
+			<ul></ul>
+			<div class="river-waiting">
+				<img class="waiting" src="http://www.code-trick.com/wp-admin/images/wpspin_light.gif" alt="" />
+			</div>
+		</div>
+		<div id="most-recent-results" class="query-results">
+			<div class="query-notice"><em>未指定搜索条件。自动显示近期条目。</em></div>
+			<ul></ul>
+			<div class="river-waiting">
+				<img class="waiting" src="http://www.code-trick.com/wp-admin/images/wpspin_light.gif" alt="" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="submitbox">
+	<div id="wp-link-cancel">
+		<a class="submitdelete deletion" href="#">取消</a>
+	</div>
+	<div id="wp-link-update">
+		<input type="submit" name="wp-link-submit" id="wp-link-submit" class="button-primary" value="更新" tabindex="100"  />	</div>
+</div>
+</form>
+</div><script type='text/javascript'>
+/* <![CDATA[ */
+var wpLinkL10n = {
+	title: "插入或编辑链接",
+	update: "更新",
+	save: "添加链接",
+	noTitle: "(无标题)",
+	noMatchesFound: "找不到符合条件的项目。"
+};
+try{convertEntities(wpLinkL10n);}catch(e){};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-includes/js/tinymce/plugins/wplink/js/wplink.js?ver=20110528'></script>
+<link rel='stylesheet' id='wplink-css'  href='http://www.code-trick.com/wp-includes/js/tinymce/plugins/wplink/css/wplink.css?ver=20101224' type='text/css' media='all' />
+<div id="wp-fullscreen-body">
+<div id="fullscreen-topbar">
+	<div id="wp-fullscreen-toolbar">
+		<div id="wp-fullscreen-close"><a href="#" onclick="fullscreen.off();return false;">退出全屏</a></div>
+		<div id="wp-fullscreen-central-toolbar" style="width:594px;">
+
+		<div id="wp-fullscreen-mode-bar"><div id="wp-fullscreen-modes">
+			<a href="#" onclick="fullscreen.switchmode('tinymce');return false;">可视化</a>
+			<a href="#" onclick="fullscreen.switchmode('html');return false;">HTML</a>
+		</div></div>
+
+		<div id="wp-fullscreen-button-bar"><div id="wp-fullscreen-buttons" class="wp_themeSkin">
+
+		<div>
+		<a title="粗体 (Ctrl + B)" onclick="fullscreen.b();return false;" class="mceButton mceButtonEnabled mce_bold" href="#" id="wp_fs_bold" role="button" aria-pressed="false">
+		<span class="mceIcon mce_bold"></span>
+		</a>
+		</div>
+
+		<div>
+		<a title="斜体 (Ctrl + I)" onclick="fullscreen.i();return false;" class="mceButton mceButtonEnabled mce_italic" href="#" id="wp_fs_italic" role="button" aria-pressed="false">
+		<span class="mceIcon mce_italic"></span>
+		</a>
+		</div>
+			<div><span aria-orientation="vertical" role="separator" class="mceSeparator"></span></div>
+
+		<div>
+		<a title="非序号式列表 (Alt + Shift + U)" onclick="fullscreen.ul();return false;" class="mceButton mceButtonEnabled mce_bullist" href="#" id="wp_fs_bullist" role="button" aria-pressed="false">
+		<span class="mceIcon mce_bullist"></span>
+		</a>
+		</div>
+
+		<div>
+		<a title="序号式列表 (Alt + Shift + O)" onclick="fullscreen.ol();return false;" class="mceButton mceButtonEnabled mce_numlist" href="#" id="wp_fs_numlist" role="button" aria-pressed="false">
+		<span class="mceIcon mce_numlist"></span>
+		</a>
+		</div>
+			<div><span aria-orientation="vertical" role="separator" class="mceSeparator"></span></div>
+
+		<div>
+		<a title="引用文字 (Alt+Shift+Q)" onclick="fullscreen.blockquote();return false;" class="mceButton mceButtonEnabled mce_blockquote" href="#" id="wp_fs_blockquote" role="button" aria-pressed="false">
+		<span class="mceIcon mce_blockquote"></span>
+		</a>
+		</div>
+
+		<div class="wp-fullscreen-both">
+		<a title="插入或编辑图像 (Alt + Shift + M)" onclick="jQuery('#add_image').click();return false;" class="mceButton mceButtonEnabled mce_image" href="#" id="wp_fs_image" role="button" aria-pressed="false">
+		<span class="mceIcon mce_image"></span>
+		</a>
+		</div>
+			<div><span aria-orientation="vertical" role="separator" class="mceSeparator"></span></div>
+
+		<div class="wp-fullscreen-both">
+		<a title="插入或编辑链接 (Alt + Shift + A)" onclick="fullscreen.link();return false;" class="mceButton mceButtonEnabled mce_link" href="#" id="wp_fs_link" role="button" aria-pressed="false">
+		<span class="mceIcon mce_link"></span>
+		</a>
+		</div>
+
+		<div>
+		<a title="取消链接 (Alt + Shift + S)" onclick="fullscreen.unlink();return false;" class="mceButton mceButtonEnabled mce_unlink" href="#" id="wp_fs_unlink" role="button" aria-pressed="false">
+		<span class="mceIcon mce_unlink"></span>
+		</a>
+		</div>
+			<div><span aria-orientation="vertical" role="separator" class="mceSeparator"></span></div>
+
+		<div>
+		<a title="帮助 (Alt + Shift + H)" onclick="fullscreen.help();return false;" class="mceButton mceButtonEnabled mce_help" href="#" id="wp_fs_help" role="button" aria-pressed="false">
+		<span class="mceIcon mce_help"></span>
+		</a>
+		</div>
+
+		</div></div>
+
+		<div id="wp-fullscreen-save">
+			<span>已保存。</span>
+			<img src="images/wpspin_light.gif" alt="" />
+			<input type="button" class="button-primary" value="保存" onclick="fullscreen.save();" />
+		</div>
+
+		</div>
+	</div>
+</div>
+
+<div id="wp-fullscreen-wrap" style="width:594px;">
+	<label id="wp-fullscreen-title-prompt-text" for="wp-fullscreen-title">在此键入标题</label>
+	<input type="text" id="wp-fullscreen-title" value="" autocomplete="off" />
+
+	<div id="wp-fullscreen-container">
+		<textarea id="wp_mce_fullscreen"></textarea>
+	</div>
+
+	<div id="wp-fullscreen-status">
+		<div id="wp-fullscreen-count">字数：<span class="word-count">0</span></div>
+		<div id="wp-fullscreen-tagline">尽情写作吧。</div>
+	</div>
+</div>
+</div>
+
+<div class="fullscreen-overlay" id="fullscreen-overlay"></div>
+<div class="fullscreen-overlay fullscreen-fader fade-600" id="fullscreen-fader"></div>
+<script type='text/javascript' src='http://www.code-trick.com/wp-admin/js/wp-fullscreen.js?ver=20110704'></script>
+<script type='text/javascript' src='http://www.code-trick.com/wp-admin/js/word-count.js?ver=20110515'></script>
+
+<div class="clear"></div></div><!-- wpwrap -->
+<script type="text/javascript">if(typeof wpOnload=='function')wpOnload();</script>
+</body>
+</html>
+
