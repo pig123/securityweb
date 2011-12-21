@@ -1,38 +1,4 @@
-﻿
-to do list:
-
-(1)create the database
-the database name is security_analysis
-(2)add something to the database.
-(3)to display the things in the database.
-
-####################################################################
-
-(1)table 2
------------------------------------------------------
-member
-
-id   name     pass    email   lastlogintime  lastloginip  
-
---------------------------------------------------------- 
-
-(2)
---------------------------------------------------------
-blog
-id    author     title  description   content    date 
---------------------------------------------------------
-
-(3)
-cms_info
-
-(5)
-
-
-
-###################################################################
-
-下面是
-/** Create WordPress database tables SQL */
+﻿/** Create WordPress database tables SQL */
 
 $wp_queries = "CREATE TABLE $wpdb->terms (
  
@@ -236,7 +202,7 @@ $charset_collate;
 
 
 #post table
-CREATE TABLE $wpdb->posts (
+CREATE TABLE posts (
 ID bigint(20) unsigned NOT NULL auto_increment,
 post_author bigint(20) unsigned NOT NULL default '0', 
 post_date datetime NOT NULL default '0000-00-00 00:00:00',
@@ -265,32 +231,5 @@ KEY post_name (post_name),
 KEY type_status_date (post_type,post_status,post_date,ID),
 KEY post_parent (post_parent),
 KEY post_author (post_author)
-) 
-
-#user table
-CREATE TABLE users(
-ID bigint(20) unsigned NOT NULL auto_increment, #the ID
-user_login varchar(60) NOT NULL default '', #login id
-user_pass varchar(64) NOT NULL default '',  #password
-user_nicename varchar(50) NOT NULL default '',
-user_email varchar(100) NOT NULL default '',
-user_url varchar(100) NOT NULL default '',  
-user_registered datetime NOT NULL default '0000-00-00 00:00:00', #the registered date
-user_activation_key varchar(60) NOT NULL default '', # activation_key
-user_status int(11) NOT NULL default '0',  #user status ,active(1),disable(0), 
-display_name varchar(250) NOT NULL default '',
-PRIMARY KEY  (ID),
-KEY user_login_key (user_login),
-KEY user_nicename (user_nicename)
-) 
-
-#usermeta table
-CREATE TABLE usermeta (
-umeta_id bigint(20) unsigned NOT NULL auto_increment,  
-user_id bigint(20) unsigned NOT NULL default '0',
-meta_key varchar(255) default NULL,
-meta_value longtext,
-PRIMARY KEY  (umeta_id),
-KEY user_id (user_id),
-KEY meta_key (meta_key)
 )
+ 
